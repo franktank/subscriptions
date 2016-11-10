@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 // Components
 import OrganizationRow from './OrganizationRow';
 
@@ -14,7 +14,7 @@ const organizationTable = ({ organizations, onAddButtonClick }) => (
         <tbody>
             {organizations.map(organization =>
                 <OrganizationRow
-                    key = {organization.id}
+                    key={organization.id}
                     {...organization}
                     onClick={() => onAddButtonClick(organization.id, JSON.stringify(new Date(), JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000)))))}
                 />

@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 // Components
 import SubscriptionRow from './SubscriptionRow';
 
@@ -16,7 +16,7 @@ const SubscriptionTable = ({ subscriptions, onRenewButtonClick, onCancelButtonCl
         <tbody>
             {subscriptions.map(subscription =>
                 <SubscriptionRow
-                    key = {subscription.id}
+                    key={subscription.id}
                     {...subscription}
                     onRButtonClick={() => onRenewButtonClick(subscription.id, JSON.stringify(new Date(), JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000)))))}
                     onCButtonClick={() => onCancelButtonClick(subscription.id)}

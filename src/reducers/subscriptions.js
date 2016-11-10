@@ -1,18 +1,36 @@
-import subscriptionReducer from './subscriptionReducer'
 import { ADD_SUBSCRIPTION } from '../actions/subscriptionActions'
 import { RENEW_SUBSCRIPTION } from '../actions/subscriptionActions'
 import { CANCEL_SUBSCRIPTION } from '../actions/subscriptionActions'
 
-const subscriptionsReducer = (state = [], action) => {
+const subscription = (state = {}, action) => {
+    switch(action.type) {
+        case ADD_SUBSCRIPTION:
+            return action.payload
+        case RENEW_SUBSCRIPTION:
+            if (state.id !== action.id) {
+                return state
+            }
+            
+            return Object.assign({}, state, {
+                startDate: action.startDate,
+                endDate: action.endDate,
+                status: true
+            })
+        default:
+            return state;
+    }
+}
+
+const subscriptions = (state = [], action) => {
     switch (action.type) {
         case ADD_SUBSCRIPTION:
             return [
                 ...state,
-                subscriptionReducer(undefined, action)
+                subscription(undefined, action)
             ]
         case RENEW_SUBSCRIPTION:
             return state.map(sub =>
-                subscriptionReducer(sub, action)
+                subscription(sub, action)
             )
         case CANCEL_SUBSCRIPTION:
             return [
@@ -22,6 +40,6 @@ const subscriptionsReducer = (state = [], action) => {
         default:
             return state
     }
-};
+}
 
-export default subscriptionsReducer
+export default subscriptions

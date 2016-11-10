@@ -8,9 +8,10 @@ export const addSubscription = (oid, startDate, endDate) => {
         type: ADD_SUBSCRIPTION,
         payload: {
             id: nextSubscriptionID++,
+            oid,
             startDate,
             endDate,
-            oid
+            status: true
         }
     }
 }
@@ -18,11 +19,9 @@ export const addSubscription = (oid, startDate, endDate) => {
 export const renewSubscription = (id, startDate, endDate) => {
     return {
         type: RENEW_SUBSCRIPTION,
-        payload: {
-            id,
-            startDate,
-            endDate
-        }
+        id,
+        startDate,
+        endDate
     }
 }
 

@@ -1,6 +1,5 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { renewSubscription, cancelSubscription } from '../actions';
+import { renewSubscription, cancelSubscription } from '../actions/subscriptionActions';
 import SubscriptionTable from '../components/SubscriptionTable'
 
 const mapStateToProps = (state) => {

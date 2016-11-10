@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
 const SubscriptionRow = ({ onRButtonClick, onCButtonClick, status, organizationID, startDate, endDate }) => (
     <tr>

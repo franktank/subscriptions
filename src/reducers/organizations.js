@@ -6,8 +6,8 @@ const initialOrgState = [
     {id: 4, name: 'Org5'}
     ];
 
-const organizationsReducer = (state = initialOrgState) => {
+const organizations = (state = initialOrgState) => {
     return state;
 };
 
-export default organizationsReducer;
+export default organizations;

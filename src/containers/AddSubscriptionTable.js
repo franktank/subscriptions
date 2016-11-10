@@ -1,6 +1,5 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { addSubscription } from '../actions';
+import { addSubscription } from '../actions/subscriptionActions';
 import OrganizationTable from '../components/OrganizationTable'
 
 const mapStateToProps = (state) => {
