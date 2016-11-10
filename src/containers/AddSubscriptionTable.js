@@ -11,8 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAddButtonClick: (id) => {
-      dispatch(addSubscription(id))
+    onAddButtonClick: (id, startDate, endDate) => {
+      dispatch(addSubscription(id, startDate, endDate))
     }
   }
 }

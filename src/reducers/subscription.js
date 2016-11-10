@@ -10,8 +10,8 @@ const subscriptionReducer = (state = {}, action) => {
             return {
                 id: action.id,
                 organizationID: action.oid,
-                startDate: JSON.stringify(new Date()),
-                endDate: JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000))),
+                startDate: action.startDate,
+                endDate: action.endDate,
                 status: true
             }
         case RENEW_SUBSCRIPTION:
@@ -20,8 +20,8 @@ const subscriptionReducer = (state = {}, action) => {
             }
             
             return Object.assign({}, state, {
-                startDate: JSON.stringify(new Date()),
-                endDate: JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000))),
+                startDate: action.startDate,
+                endDate: action.endDate,
                 status: true
             })
         case CANCEL_SUBSCRIPTION:

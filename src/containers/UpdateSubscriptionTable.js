@@ -11,8 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onRenewButtonClick: (id) => {
-      dispatch(renewSubscription(id))
+    onRenewButtonClick: (id, startDate, endDate) => {
+      dispatch(renewSubscription(id, startDate, endDate))
     },
     onCancelButtonClick: (id) => {
         dispatch(cancelSubscription(id))
