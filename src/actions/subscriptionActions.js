@@ -3,12 +3,12 @@ export const RENEW_SUBSCRIPTION = 'RENEW_SUBSCRIPTION'
 export const CANCEL_SUBSCRIPTION = 'CANCEL_SUBSCRIPTION'
 
 let nextSubscriptionID = 0;
-export const addSubscription = (oid, startDate, endDate) => {
+export const addSubscription = (organizationID, startDate, endDate) => {
     return {
         type: ADD_SUBSCRIPTION,
         payload: {
             id: nextSubscriptionID++,
-            oid,
+            organizationID,
             startDate,
             endDate,
             status: true

@@ -4,7 +4,7 @@ const OrganizationRow = ({ id, organizationName, onClick }) => (
     <tr>
         <td>{id}</td>
         <td>{organizationName}</td>
-        <td>Add subscription</td>
+        <td><button onClick={onClick}>Add subscription</button></td>
     </tr>
 )
 

@@ -5,8 +5,8 @@ const SubscriptionRow = ({ onRButtonClick, onCButtonClick, status, organizationI
         <td style={{color: status ? 'green' : 'red'}}>{organizationID}</td>
         <td>{startDate}</td>
         <td>{endDate}</td>
-        <td>Renew Subscription </td>
-        <td>Cancel Subscription</td>
+        <td><button onClick={onRButtonClick}>Renew subscription</button></td>
+        <td><button onClick={onCButtonClick}>Cancel subscription</button></td>
     </tr>
 )
 
