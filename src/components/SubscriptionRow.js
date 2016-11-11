@@ -14,7 +14,7 @@ SubscriptionRow.propTypes = {
   onRButtonClick: PropTypes.func.isRequired,
   onCButtonClick: PropTypes.func.isRequired,
   status: PropTypes.bool.isRequired,
-  organizationID: PropTypes.integer.isRequired,
+  organizationID: PropTypes.number.isRequired,
   startDate: PropTypes.string.isRequired,
   endDate: PropTypes.string.isRequired
 }

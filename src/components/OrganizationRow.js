@@ -9,7 +9,7 @@ const OrganizationRow = ({ id, organizationName, onClick }) => (
 )
 
 OrganizationRow.propTypes = {
-  id: PropTypes.integer.isRequired,
+  id: PropTypes.number.isRequired,
   organizationName: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }
