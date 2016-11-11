@@ -10,7 +10,6 @@ const subscription = (state = {}, action) => {
             if (state.id !== action.id) {
                 return state
             }
-            
             return Object.assign({}, state, {
                 startDate: action.startDate,
                 endDate: action.endDate,

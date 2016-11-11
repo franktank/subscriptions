@@ -28,8 +28,6 @@ export const renewSubscription = (id, startDate, endDate) => {
 export const cancelSubscription = (id) => {
     return {
         type: CANCEL_SUBSCRIPTION,
-        payload: {
-            id
-        }
+        id
     }
 }

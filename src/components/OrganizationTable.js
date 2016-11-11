@@ -16,7 +16,7 @@ const organizationTable = ({ organizations, onAddButtonClick }) => (
                 <OrganizationRow
                     key={organization.id}
                     {...organization}
-                    onClick={() => onAddButtonClick(organization.id, JSON.stringify(new Date(), JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000)))))}
+                    onClick={() => onAddButtonClick(organization.id, JSON.stringify(new Date()), JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000))))}
                 />
             )}
         </tbody>

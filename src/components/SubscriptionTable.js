@@ -18,7 +18,7 @@ const SubscriptionTable = ({ subscriptions, onRenewButtonClick, onCancelButtonCl
                 <SubscriptionRow
                     key={subscription.id}
                     {...subscription}
-                    onRButtonClick={() => onRenewButtonClick(subscription.id, JSON.stringify(new Date(), JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000)))))}
+                    onRButtonClick={() => onRenewButtonClick(subscription.id, JSON.stringify(new Date()), JSON.stringify(new Date(new Date().getTime() + (30*24*60*60*1000))))}
                     onCButtonClick={() => onCancelButtonClick(subscription.id)}
                 />
             )}
