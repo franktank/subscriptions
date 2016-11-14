@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import OrganizationRow from './OrganizationRow';
 
 const organizationTable = ({ organizations, onAddButtonClick }) => (
-    <table>
+    <table className='organization-table'>
         <thead>
           <tr>
             <th>OrganizationID</th>

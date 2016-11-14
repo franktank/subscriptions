@@ -11,3 +11,9 @@ The following functionality is complete:
 TODO:
 
 - [  ] Write tests!
+- 
+
+
+
+<!-- Look at more components test for Enzyme, jest.fn()? -->
+<!-- UX, single table? -->

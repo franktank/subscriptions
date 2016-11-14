@@ -12,6 +12,7 @@ describe('<OrganizationTable />', () => {
     ];
     
     it('renders without crashing', () => {
-        shallow(<OrganizationTable organizations={initialOrgState}/>);
+        let enzymeWrapper = shallow(<OrganizationTable organizations={initialOrgState}/>);
+        expect(enzymeWrapper.find('table').hasClass('organization-table')).toBe(true)
     });
 });

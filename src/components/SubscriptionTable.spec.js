@@ -21,6 +21,7 @@ describe('<SubscriptionTable />', () => {
         ];
     
     it('renders without crashing', () => {
-        shallow(<SubscriptionTable subscriptions={initialState}/>);
+        let enzymeWrapper = shallow(<SubscriptionTable subscriptions={initialState}/>);
+        expect(enzymeWrapper.find('table').hasClass('subscription-table')).toBe(true)
     });
 });

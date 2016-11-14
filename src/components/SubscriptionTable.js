@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import SubscriptionRow from './SubscriptionRow';
 
 const SubscriptionTable = ({ subscriptions, onRenewButtonClick, onCancelButtonClick }) => (
-    <table>
+    <table className='subscription-table'>
         <thead>
           <tr>
             <th>OrganizationID</th>
