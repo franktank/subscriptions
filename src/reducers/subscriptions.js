@@ -33,7 +33,7 @@ const subscriptions = (state = [], action) => {
             )
         case CANCEL_SUBSCRIPTION:
             return [
-            // ...state.slice(0, action.id) or??
+            // ...state.slice(0, action.id + 1) or (0, action.id - 1)??
             ...state.slice(0,action.id - 1),
             ...state.slice(action.id + 1)
             ]
